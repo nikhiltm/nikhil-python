@@ -1,0 +1,24 @@
+#!/bin/bash
+mkdir testbuild
+cd testbuild
+mkdir facebook
+cd facebook
+git clone -b krogoth https://git.yoctoproject.org/git/poky
+cd poky
+git clone -b krogoth https://github.com/openembedded/meta-openembedded.git
+git clone -b krogoth https://git.yoctoproject.org/git/meta-security
+git clone https://github.com/facebook/openbmc.git meta-openbmc
+export TEMPLATECONF=meta-openbmc/meta-facebook/meta-wedge100/conf
+source oe-init-build-env
+cd conf
+/home/ubuntu/cat2.py bblayers.conf
+cp newfile.txt bblayers.conf
+cd /home/ubuntu/testbuild/facebook
+git clone -b krogoth https://github.com/openembedded/meta-openembedded.git
+git clone https://github.com/facebook/openbmc.git meta-openbmc
+git clone -b krogoth https://git.yoctoproject.org/git/meta-security
+cd poky
+cd build
+bitbake wedge100-image
+
+
