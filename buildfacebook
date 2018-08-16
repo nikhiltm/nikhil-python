@@ -1,4 +1,11 @@
 #!/bin/bash
+set -e
+#sudo apt-get update -y
+#sudo apt-get install -y  python-minimal 
+#sudo apt-get install -y build-essential
+#sudo apt-get install chrpath
+#sudo apt-get install diffstat
+#sudo apt-get install -y texinfo
 mkdir testbuild
 cd testbuild
 mkdir facebook
@@ -19,6 +26,6 @@ git clone https://github.com/facebook/openbmc.git meta-openbmc
 git clone -b krogoth https://git.yoctoproject.org/git/meta-security
 cd poky
 cd build
-bitbake wedge100-image
+nohup bitbake wedge100-image &
 
 
