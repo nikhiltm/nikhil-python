@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
-#sudo apt-get update -y
-#sudo apt-get install -y  python-minimal 
-#sudo apt-get install -y build-essential
-#sudo apt-get install chrpath
-#sudo apt-get install diffstat
-#sudo apt-get install -y texinfo
+sudo apt-get update -y
+sudo apt-get install -y  python-minimal 
+sudo apt-get install -y build-essential
+sudo apt-get install chrpath
+sudo apt-get install diffstat
+sudo apt-get install -y texinfo
 mkdir testbuild
 cd testbuild
 mkdir facebook
