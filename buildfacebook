@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+cp /home/ubuntu/nikhil-python/cat2.py /home/ubuntu
 sudo apt-get update -y
 sudo apt-get install -y  python-minimal 
 sudo apt-get install -y build-essential
